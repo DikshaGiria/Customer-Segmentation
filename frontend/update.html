@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>customer segmentation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-container w3-blue">
+  <h2>Enter the details</h2>
+</div>
+
+<form class="w3-container">
+  <p>
+  <label>Invoice Number:</label>
+  <input class="w3-input" type="number" required></p>
+  
+  <p>
+  <label>Stock Code:</label>
+  <input class="w3-input" type="number" required></p>
+  
+  <select class="w3-select w3-border" name="option" required>
+    <option value="" disabled selected>Description</option>
+    <option value="1">White Hanging Heart T-Light Holder</option>
+    <option value="2">White Metal Lantern</option>
+    <option value="3">Mini Paint Set Vintage</option>
+  </select>
+  
+  
+  <p>
+  <label>Quantity</label>
+  <input class="w3-input" type="number" required></p>
+  
+  
+  <p>
+  <label>Country</label>
+  <input class="w3-input" type="text" pattern="[a-zA-Z'-'\s]*" required></p>
+  
+  <p>
+  <button class="w3-container w3-blue">Update</button></p>
+  
+</form>
+
+</body>
+</html> 
