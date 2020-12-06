@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<title>E-Commerce Read</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script>
+function display() {
+   document.getElementById('table1').style.display = "block";
+}
+</script>
+<style>
+table {
+         width: 150px;
+         text-align: center;
+         border: 1px solid black;
+         padding: 5px;
+       }
+td, th { border: 1px solid;
+          width: 500px;
+         text-align: center;
+         white-space:nowrap; } 	 
+a:link {
+  float:right;
+  font-size:20px;
+}
+ </style>
+<body>
+<div class="w3-container w3-blue">
+ <i> <h2>Enter the details <a href="http://127.0.0.1:5000/" >Home Page</a> </h2></i>
+</div>
+
+<form class="w3-container" action="/read" >
+  <p>
+  <label>Invoice Number:</label>
+  <input class="w3-input" type="number" name="InvoiceNo" required>
+  </p>
+  <p>
+  <button class="w3-container w3-blue" onClick="display();">Submit</button></p>
+</form>
+<div id="table1" style="display: none;"> 
+<table> 
+  <thead> 
+  <tr> 
+      <th>Stock Code</th> 
+      <th>Description</th> 
+      <th>Quantity</th>
+      <th>Invoice Date</th>
+      <th>Unit Price</th>
+  </tr> 
+  </thead> 
+  <tbody> 
+      {% for row in invoice %}  
+          <tr> 
+              <td>{{row['StockCode']}}</td> 
+              <td>{{row['Description']}}</td>
+              <td>{{row['Quantity']}}</td> 
+              <td>{{row['InvoiceDate']}}</td>
+              <td>{{row['UnitPrice']}}</td>
+          </tr> 
+      {% endfor %} 
+  </tbody> 
+</table>
+</div>
+
+</body>
+</html> 
