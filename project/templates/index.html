@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Customer Segmentation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{
+  box-sizing: border-box;
+  }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.header {
+  padding: 280px;
+  text-align: center;
+  background:#157DEC;
+  color: white;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+
+.button {
+  background-color: #157DEC;
+  border: 2px solid #E8E8E8;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+.button:hover {
+  background-color:#87CEFA;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>E-Commerce</h1>
+  <p>A <b>E-commerce </b>data analysis</p>
+  <button class="button" onclick="window.location.href='{{ url_for('create')}}';">Create</button>
+  <button class="button" onclick="window.location.href='{{ url_for('update')}}';">Update</button>
+  <button class="button" onclick="window.location.href='{{ url_for('read')}}';">Read</button>
+  <button class="button" onclick="window.location.href='http://127.0.0.1:5000/delete';">Delete</button>
+</div
+</body>
+</html>
